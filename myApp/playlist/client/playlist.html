@@ -1,0 +1,54 @@
+<head>
+  <title>playlist</title>
+  <link rel="icon" sizes="16x16 32x32" href="/favicon.ico?v=2">
+</head>
+
+<body>
+  <div id="container">
+      {{> loginButtons }} 
+      {{> checkLog}}
+      <h1>hXhRonie's MyPlaylist</h1>
+
+     {{> musicSearch }}
+     {{> results }}
+     {{> playList}}
+  </div>
+</body>
+<template name="checkLog">
+  <h3 id="note">{{log}}</h3>
+</template>
+
+<template name="musicSearch">
+  {{#if currentUser}}
+  <form>
+    <label>Search Videos: </label>
+    <input type="text" name="music" class="music" placeholder="Enter your search" required>
+    <label for="range">Specify maximum search results:</label>
+    <input type="range" name="maxResult" id="range" class="music" max="50" min="1" value="10">
+    <input type="text" id="forRange" class="music" value="10" readonly>
+    <input type="submit" class="search" value="Search">
+  </form>
+  {{/if}}
+ 
+</template>
+
+<template name="results">
+ {{#if currentUser}}
+   <div id="searchResults"></div>
+   <input type="text" id="title" class="add title" name="title" placeholder="Video Title" readonly>
+   <input type="button" class="add title" value="Add to Playlist">
+   {{/if}}
+</template>
+
+<template name="playList">
+{{#if currentUser}}
+  <h3 id="video" class="{{classHide}}">My Video Playlist</h3>
+  <table class="{{classHide}}">
+      <tr><th>Video</th><th>Title</th><th>Description</th><th>Download Video</th><th>Delete Video</th></tr>
+      {{#each rows}}
+          <tr><td><iframe src="{{embed}}" allowfullscreen></iframe></td><td>{{title}}</td><td>{{desc}}</td><td><a href="{{download}}" target="_blank">Download</a></td><td><a href="#" class="delete">Delete</a></td></tr>
+      {{/each}}
+  </table>
+ 
+  {{/if}}
+</template>

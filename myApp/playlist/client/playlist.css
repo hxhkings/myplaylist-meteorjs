@@ -1,0 +1,220 @@
+/* CSS declarations go here */
+
+@font-face{
+	font-family:Playlist;
+	src: url('/fonts/Idiot Stax.otf');
+}
+@font-face{
+	font-family:Video;
+	src:url('/fonts/Cheer Lace Leader.ttf');
+}
+div#searchResults{
+	height:273px;
+	width:80%;
+	overflow-x:scroll;
+	display:flex;
+	overflow-y:hidden;
+	margin:auto;
+	flex-wrap: nowrap;
+	margin-top:5%;
+}
+p.title{
+	margin-top:-2%;
+	text-align:center;
+	height:60px;
+	overflow:hidden;
+}
+p.title:hover{
+	color:#31d;
+	cursor:pointer;
+}
+span{
+	border:2px solid #000;
+	height:249px;
+	
+}
+td:nth-of-type(3), td:nth-of-type(2){
+	overflow-x:scroll;
+	
+}
+h1{
+	text-align:center;
+	font-size:80px;
+	color:#2C104A;
+	font-family:Playlist, Times, serif;
+	border: 12px dashed #2C104A;
+	-moz-border-radius:30%;
+	-webkit-border-radius:30%;
+	border-radius: 30%;
+	background: #F5EBEB;
+}
+input:not([type=submit]), label{
+	display:block;
+	width: 20%;
+	margin:5px auto;
+	font-family: Times, serif;
+}
+[type=submit]{
+	display:block;
+	margin:5px auto;
+	width:20%;
+	font-size:15px;
+	background:#fff;
+	-moz-box-shadow:inset 0 0 15px #666;
+	-webkit-box-shadow:inset 0 0 15px #666;
+	box-shadow: inset 0 0 15px #666;
+	font-weight:bold;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	font-family: Times, serif;
+}
+[type=submit]:hover, [type=button]:hover{
+	background: #a5f;
+	-moz-box-shadow:0 0 15px #000;
+	-webkit-box-shadow:0 0 15px #000;
+	box-shadow:0 0 15px #000;
+}
+
+#range{
+	position:relative;
+	width:30%;
+	display:inline;
+	left:30%;
+	
+}
+
+#forRange{
+	position:relative;
+	width:18px;
+	height:15px;
+	display:inline;
+	left:30%;
+	-moz-box-shadow:inset 0 0 15px #666;
+	-webkit-box-shadow:inset 0 0 15px #666;
+	box-shadow: inset 0 0 15px #666;
+	font-size:15px
+	font-weight:bolder!important;
+	font-family: Times, serif;
+}
+input.title{
+	display:none;
+	-moz-box-shadow:inset 0 0 15px #666;
+	-webkit-box-shadow:inset 0 0 15px #666;
+	box-shadow: inset 0 0 15px #666;
+}
+th, td{
+	border: 2px solid #000;
+	text-align:center;
+	font-size:24px;
+	width:20%!important;
+	flex:1;
+	display:flex;
+	align-items:center;
+
+}
+td iframe{
+
+	max-width:100%;
+}
+table{
+	margin-bottom:50px;
+	border: 2px solid #000;
+	width:100%;
+}
+h3#video{
+	margin-top:5%;
+	text-align:center;
+	font-size:40px;
+	font-family: Video, Times, serif;
+}
+#note{
+	color:#c92212;
+}
+
+table.hide, h3.hide{
+	display:none!important;
+}
+td a{
+	text-decoration:none;
+	font-weight:bold;
+	font-size: 30px;
+	color: #3377cc;
+}
+td a:hover{
+	color: #3300cc;
+}
+div#container{
+	width:80%;
+	display:block;
+	margin:auto;
+	background-color:#ccf;
+	margin-top:5%;
+	padding:4%;
+	-moz-border-radius:10%;
+	-webkit-border-radius:10%;
+	border-radius: 10%;
+	-moz-box-shadow:inset 0 0 100px #ddd;
+	-webkit-box-shadow:inset 0 0 100px #ddd;
+	box-shadow: inset 0 0 100px #ddd;
+	-moz-box-shadow:0 0 35px #9f0;
+	-webkit-box-shadow:0 0 35px #9f0;
+	box-shadow:0 0 35px #9f0;
+}
+form label{
+	font-size:18px;
+	color: #ddd;
+	width: 250px;
+}
+form input[type=text], form input[type=range]{
+	width:40%;
+	-moz-box-shadow:inset 0 0 15px #666;
+	-webkit-box-shadow:inset 0 0 15px #666;
+	box-shadow: inset 0 0 15px #666;
+}
+form{
+	background: #42a;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius: 50%;
+	width: 50%;
+	padding:3%;
+	height:50%;
+	margin:auto;
+}
+input.add{
+	-moz-box-shadow:inset 0 0 15px #666;
+	-webkit-box-shadow:inset 0 0 15px #666;
+	box-shadow: inset 0 0 15px #666;
+	background:#fff;
+	font-size:15px;
+	font-weight:bold;
+	font-family: Times, serif;
+}
+body{
+	background: url('/images/background.jpeg') no-repeat fixed;
+
+}
+tr:nth-of-type(odd){
+	background: #bbb;
+
+}
+tr:nth-of-type(even){
+	background: #ddd;
+}
+tr{
+	max-width:100%;
+	display:flex;
+}
+
+td:nth-of-type(4), td:nth-of-type(5), td:nth-of-type(1), th{
+	justify-content: center;
+}
+ th:nth-child(1), td:nth-of-type(1){
+	flex:2;
+}
+form, div#searchResults, table, h1{
+	-moz-box-shadow:0 0 15px #000;
+	-webkit-box-shadow:0 0 15px #000;
+	box-shadow:0 0 15px #000;
+}
